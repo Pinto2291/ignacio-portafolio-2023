@@ -1,0 +1,225 @@
+:root {
+    --font-white: #FFF;
+    --bg-black: black;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: Raleway, sans-serif;
+}
+
+/* UTILITIES */
+
+.font-bold {
+    font-weight: bold;
+}
+
+.bg-black {
+    background-color: rgba(0, 0, 0, 0.65);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    border-radius: 3rem;
+}
+
+/* HEADER */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+}
+
+.navbar-title {
+    text-align: center;
+}
+
+.navbar-title-name {
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: bold;
+    padding: 0.5rem 0;
+}
+
+.navbar-title-description {
+    font-size: 1.2rem;
+    padding: 0.5rem 0;
+}
+
+.profile-picture {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 25%;
+}
+
+.header {
+    position: relative;
+}
+
+/* HERO */
+
+.hero {
+    background-image: linear-gradient(45deg, rgba(40, 76, 209, 0.75), rgba(92, 118, 212, 0.4)), url('./img/working.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+    padding: 18rem 0;
+    width: 100%;
+    text-align: center;
+    color: var(--font-white);
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin: 0 0 1rem;
+}
+
+.hero-text {
+    font-size: 1.6rem;
+    margin-bottom: 3.5rem;
+    font-weight: bold;
+}
+
+.hero-description {
+    font-size: 5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.25rem;
+}
+
+/* BUTTON */
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.button {
+    padding: 1.2rem;
+    font-weight: bold;
+    border-radius: 3rem;
+    border: none;
+    width: 10rem;
+    font-size: 1.6rem;
+    transition: all 100ms ease-in 50ms;
+    cursor: pointer;
+}
+
+.button-white {
+    background-color: #fff;
+}
+
+.button-white:hover {
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #FFF;
+}
+
+.button-blue {
+    background-color: rgba(62, 68, 234, 0.78);
+    color: var(--font-white);
+}
+
+.button-blue:hover {
+    background-color: #FFF;
+    color: rgba(62, 68, 234, 0.78);
+}
+
+/* MENU ICONS */
+
+.icons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 0.45rem;
+}
+
+.menu-icon {
+    height: 0.8rem;
+    width: 0.8rem;
+    background-color: black;
+    transition: all 100ms ease-in 50ms;
+}
+
+.icons:hover .menu-icon {
+    border-radius: 50%;
+}
+
+/* CURVE */
+
+.custom-shape-divider-bottom-1678340157 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1678340157 svg {
+    position: relative;
+    display: block;
+    width: calc(110% + 1.3px);
+    height: 124px;
+}
+
+.custom-shape-divider-bottom-1678340157 .shape-fill {
+    fill: #FFFFFF;
+}
+
+/* ABOUT ME */
+
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+    position: relative;
+    padding-bottom: 5rem;
+}
+
+.about-me-picture {
+    width: 20rem;
+    height: auto;
+    border-radius: 25%;
+    opacity: 0.8;
+}
+
+.about-me-title {
+    font-size: 3.6rem;
+    font-weight: bold;
+    padding-bottom: 1.5rem;
+}
+
+.about-me-description {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1.5rem;
+}
+
+.about-me-lorem {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.about-me-data {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding-top: 2rem;
+}
+
+.about-me-data-info {
+    font-size: 1.5rem;
+
+}
