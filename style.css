@@ -47,6 +47,12 @@ a {
     text-align: center;
 }
 
+.responsive {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+}
+
 /* PADDING */
 
 .pb-10 {
@@ -147,17 +153,17 @@ a {
     height: 25vh;
 }
 
-.sidebar-footer-nav {
+.sidebar-footer-nav, .navbar-icons {
     display: flex;
     justify-content: center;
     gap: 1rem;
 }
 
-.sidebar-footer-nav a {
+.sidebar-footer-nav a, .navbar-icons a {
     transition: all 100ms ease-in-out 50ms;
 }
 
-.sidebar-footer-nav a:hover {
+.sidebar-footer-nav a:hover, .navbar-icons a:hover {
     color: rgba(40, 77, 209, 0.916);
 }
 
@@ -167,7 +173,7 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 2rem;
 }
 
 .navbar-title {
@@ -178,12 +184,12 @@ a {
     text-transform: uppercase;
     font-size: 1.8rem;
     font-weight: bold;
-    padding: 0.5rem 0;
+    padding: 0.3rem 0;
 }
 
 .navbar-title-description {
     font-size: 1.2rem;
-    padding: 0.5rem 0;
+    
 }
 
 .profile-picture {
@@ -206,7 +212,7 @@ a {
     background-position: center;
     background-attachment: fixed;
     height: 100vh;
-    padding: 12rem 0 18rem 0;
+    padding-top: 8rem;
     width: 100%;
     text-align: center;
     color: var(--font-white);
@@ -325,13 +331,12 @@ a {
     position: relative;
     padding-bottom: 5rem;
     margin-left: 25rem;
+    gap: 1rem;
 }
 
 .about-me-picture {
-    width: 20rem;
-    height: auto;
-    border-radius: 25%;
     opacity: 0.8;
+    border-radius: 10px;
 }
 
 .about-me-title {
@@ -374,12 +379,74 @@ a {
         display: none;
     }
 
+    .menu-icon {
+        width: 0.5rem;
+        height: 0.5rem;
+    }
+
+    .about-me {
+        grid-template-columns: 30% 70%;
+        font-size: 8vw;
+        overflow: hidden;
+    }
+
+    .about-me-title {
+        text-align: center;
+    }
+
+    .about-me-description {
+        text-align: center;
+    }
+
+    .about-me-lorem {
+        text-align: justify;
+        word-break: break-all;
+    }
+
+    .about-me-data {
+        display: flex;
+        flex: wrap;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: #FFF;
+        box-shadow: -3px 8px 22px 13px rgba(36,36,37,0.78);
+        -webkit-box-shadow: -3px 8px 22px 13px rgba(36,36,37,0.78);
+        -moz-box-shadow: -3px 8px 22px 13px rgba(36,36,37,0.78);
+        z-index: 1;
+    }
+
+    .hero {
+        margin-top: 6.1rem;
+    }
+
     .header {
         margin-left: 0;
     }
 
     .about-me {
         margin-left: 0;
+    }
+
+    .about-me-title {
+        font-size: 2.4rem;
+    }
+    
+    .about-me-description {
+        font-size: 1.5rem;
+    }
+    
+    .about-me-lorem {
+        font-size: 1.2rem;
+    }
+
+    .about-me-data-info {
+        font-size: 1.2rem;
     }
 
 }
