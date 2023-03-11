@@ -1,6 +1,8 @@
 :root {
     --font-white: #FFF;
     --bg-black: black;
+    --sidebar-width: 25rem;
+    --light-blue: rgba(62, 68, 234, 0.78);
 }
 
 * {
@@ -49,7 +51,7 @@ a {
 
 .responsive {
     width: 100%;
-    max-width: 250px;
+    max-width: 280px;
     height: auto;
 }
 
@@ -110,8 +112,7 @@ a {
 /* SIDEBAR */
 
 .sidebar {
-    /*height: 100%;*/
-    width: 25rem;
+    width: var(--sidebar-width);
     position: fixed;
     z-index: 1;
     top: 0;
@@ -193,14 +194,26 @@ a {
 }
 
 .profile-picture {
-    width: 6rem;
-    height: 6rem;
-    border-radius: 25%;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 65% 34% 23% 77% / 16% 41% 58% 84%;
+    border: 2px solid rgba(62, 68, 234, 0.78);
+    box-shadow: 18px -15px 32px -2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 18px -15px 32px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: 18px -15px 32px -2px rgba(0,0,0,0.65);
+    transition: all 200ms ease-in 150ms;
+}
+
+.profile-picture:hover {
+    border-radius: 86% 14% 86% 14% / 25% 23% 77% 75%;
+    box-shadow: -24px 15px 32px -2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: -24px 15px 32px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: -24px 15px 32px -2px rgba(0,0,0,0.65);
 }
 
 .header {
     position: relative;
-    margin-left: 25rem;
+    margin-left: var(--sidebar-width);
 }
 
 /* HERO */
@@ -262,8 +275,8 @@ a {
     background-color: rgba(0, 0, 0, 0.75);
     color: #FFF;
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
--webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
--moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
 }
 
 .button-blue {
@@ -275,22 +288,22 @@ a {
     background-color: #FFF;
     color: rgba(62, 68, 234, 0.78);
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
--webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
--moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
 }
 
 /* MENU ICONS */
 
 .icons {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 0.45rem;
 }
 
 .menu-icon {
-    height: 0.8rem;
-    width: 0.8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    padding: 0.5rem;
     background-color: black;
     transition: all 100ms ease-in 50ms;
 }
@@ -329,35 +342,60 @@ a {
     align-items: center;
     justify-items: center;
     position: relative;
-    padding-bottom: 5rem;
-    margin-left: 25rem;
-    gap: 1rem;
+    padding-bottom: 15rem;
+    margin-left: var(--sidebar-width);
+    gap: 1.5rem;
 }
 
-.about-me-picture {
-    border-radius: 10px;
+.custom-shape-divider-bottom-1678516310 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1678516310 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 172px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1678516310 .shape-fill {
+    fill: #3E44EAC7;
+}
+
+.about-me-info {
+    padding: 1rem 0.5rem;
+    margin-right: 20px;
 }
 
 .about-me-title {
     font-size: 3.6rem;
     font-weight: bold;
-    padding-bottom: 1.5rem;
+    margin-bottom: 0.6rem;
 }
 
 .about-me-description {
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: 500;
     padding-bottom: 1.5rem;
 }
 
 .about-me-lorem {
     font-size: 1.5rem;
     line-height: 2rem;
+    border-bottom: 0.2rem solid rgba(52, 51, 51, 0.549);
+    padding-bottom: 2rem;
 }
 
 .about-me-data {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 70% 30%;
     gap: 2rem;
     padding-top: 2rem;
 }
@@ -366,13 +404,77 @@ a {
     font-size: 1.5rem;
 }
 
-@media only screen and (min-width: 655px) {
+.about-me-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: 1.5rem;
+}
+
+.about-me-buttons > button {
+    font-size: 1.2rem;
+    box-shadow: 27px -30px 96px -19px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 27px -30px 96px -19px rgba(0,0,0,0.65);
+    -moz-box-shadow: 27px -30px 96px -19px rgba(0,0,0,0.65);
+    transition: all 200ms ease-in-out 100ms;
+}
+
+.about-me-button-blue {
+    background-color: rgb(62, 68, 234);
+    color: #FFF;
+    border-radius: 71% 29% 77% 23% / 20% 74% 26% 80%;
+}
+
+.about-me-button-blue:hover {
+    border-radius: 21% 79% 22% 78% / 74% 16% 84% 26%;
+}
+
+.about-me-button-white {
+    border-radius: 21% 79% 22% 78% / 74% 16% 84% 26%;
+    background-color: rgba(223, 220, 220, 0.749);
+}
+
+.about-me-button-white:hover {
+    border-radius: 71% 29% 77% 23% / 20% 74% 26% 80%;
+}
+
+/* BLOB */
+
+.blob-element {
+    border-radius: 65% 34% 23% 77% / 16% 41% 58% 84%;
+    border: 5px solid rgba(62, 68, 234, 0.78);
+    transition: all 250ms ease-in-out 50ms;
+    box-shadow: -23px 20px 32px -2px rgba(0,0,0,0.65);
+    -webkit-box-shadow: -23px 20px 32px -2px rgba(0,0,0,0.65);
+    -moz-box-shadow: -23px 20px 32px -2px rgba(0,0,0,0.65);
+}
+
+.blob-element:hover {
+    border-radius:  11% 89% 33% 67% / 37% 33% 67% 63% ;
+    box-shadow: 6px -7px 32px -10px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 6px -7px 32px -10px rgba(0,0,0,0.65);
+    -moz-box-shadow: 6px -7px 32px -10px rgba(0,0,0,0.65);
+}
+
+/* EXPERIENCE */
+
+.experience {
+    margin-left: var(--sidebar-width);
+    height: 70vh;
+    margin-top: 15vh;
+}
+
+.experience-info {
+    margin-left: 3rem;
+}
+
+@media only screen and (min-width: 855px) {
     .navbar {
         display: none;
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 850px) {
 
     .sidebar {
         display: none;
@@ -422,6 +524,22 @@ a {
 
     .hero {
         margin-top: 6.1rem;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-text {
+        font-size: 1.5rem;
+    }
+    
+    .hero-description {
+        font-size: 3rem;
+    }
+
+    .button {
+        font-size: 1.2rem;
     }
 
     .header {
