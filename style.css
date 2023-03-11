@@ -147,6 +147,8 @@ a {
 .sidebar-navbar-elements a:hover {
     background-color: rgba(77, 113, 243, 0.232);
     color: rgba(40, 77, 209, 0.916);
+    margin-left: 2.5rem;
+    border-bottom: 0.25rem solid rgba(0, 0, 0, 0.16);
 }
 
 .sidebar-footer {
@@ -161,11 +163,12 @@ a {
 }
 
 .sidebar-footer-nav a, .navbar-icons a {
-    transition: all 100ms ease-in-out 50ms;
+    transition: all 150ms ease 50ms;
 }
 
 .sidebar-footer-nav a:hover, .navbar-icons a:hover {
     color: rgba(40, 77, 209, 0.916);
+    border-bottom: 0.25rem solid rgba(40, 77, 209, 0.916);
 }
 
 /* HEADER */
@@ -269,6 +272,7 @@ a {
 
 .button-white {
     background-color: #fff;
+    border: 0.1rem solid black;
 }
 
 .button-white:hover {
@@ -277,11 +281,13 @@ a {
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    scale: 110%;
 }
 
 .button-blue {
     background-color: rgba(62, 68, 234, 0.78);
     color: var(--font-white);
+    border: 0.1rem solid black;
 }
 
 .button-blue:hover {
@@ -290,6 +296,7 @@ a {
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    scale: 110%;
 }
 
 /* MENU ICONS */
@@ -409,6 +416,7 @@ a {
     justify-content: flex-start;
     gap: 2rem;
     margin-top: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about-me-buttons > button {
@@ -417,6 +425,10 @@ a {
     -webkit-box-shadow: 27px -30px 96px -19px rgba(0,0,0,0.65);
     -moz-box-shadow: 27px -30px 96px -19px rgba(0,0,0,0.65);
     transition: all 200ms ease-in-out 100ms;
+    box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
+    border: 0.2rem solid black;
 }
 
 .about-me-button-blue {
@@ -427,15 +439,16 @@ a {
 
 .about-me-button-blue:hover {
     border-radius: 21% 79% 22% 78% / 74% 16% 84% 26%;
+    scale: 110%;
 }
 
 .about-me-button-white {
     border-radius: 21% 79% 22% 78% / 74% 16% 84% 26%;
-    background-color: rgba(223, 220, 220, 0.749);
 }
 
 .about-me-button-white:hover {
     border-radius: 71% 29% 77% 23% / 20% 74% 26% 80%;
+    scale: 110%;
 }
 
 /* BLOB */
@@ -466,6 +479,22 @@ a {
 
 .experience-info {
     margin-left: 3rem;
+}
+
+.hexagons {
+    display: flex;
+    gap: 5rem;
+}
+
+.hexagon-element {
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    width: 10rem;
+    height: 10rem;
+    background-color: black;
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 @media only screen and (min-width: 855px) {
