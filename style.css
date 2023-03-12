@@ -17,6 +17,12 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
+    /*transition: all 250ms ease-in-out 100ms;*/
+    margin-left: var(--sidebar-width);
+}
+
+.active {
+    margin-left: var(--sidebar-width);
 }
 
 li {
@@ -109,32 +115,54 @@ a {
     font-size: 2.5rem;
 }
 
-/* SIDEBAR */
+.font-blue {
+    color: var(--light-blue);
+}
 
+/* SIDEBAR */
 .sidebar {
-    width: var(--sidebar-width);
     position: fixed;
+    width: var(--sidebar-width);
     z-index: 1;
     top: 0;
     left: 0;
     overflow-x: hidden;
-    padding-top: 1.8rem;
     box-shadow: 3px 2px 18px 5px rgba(0,0,0,0.65);
     -webkit-box-shadow: 3px 2px 18px 5px rgba(0,0,0,0.65);
     -moz-box-shadow: 3px 2px 18px 5px rgba(0,0,0,0.65);
+    height: 100%;
+    /*transition: all 250ms ease-in-out 100ms;*/
+}
+
+.display-none {
+    display: none;
 }
 
 .sidebar-title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 2rem;
-    height: 25vh;
+    padding-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+.sidebar-title-button {
+    background-color: #FFF;
+    font-size: 1.5rem;
+    border: 0.2rem solid black;
+    padding: 0.5rem;
+    border-radius: 50%;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 0.5rem;
+}
+
+.sidebar-title-button:hover {
+    scale: 110%;
 }
 
 .sidebar-navbar {
     margin-top: 2.5rem;
-    height: 50vh;
 }
 
 .sidebar-navbar-elements a {
@@ -153,7 +181,6 @@ a {
 
 .sidebar-footer {
     margin-top: 5rem;
-    height: 25vh;
 }
 
 .sidebar-footer-nav, .navbar-icons {
@@ -193,7 +220,6 @@ a {
 
 .navbar-title-description {
     font-size: 1.2rem;
-    
 }
 
 .profile-picture {
@@ -216,7 +242,6 @@ a {
 
 .header {
     position: relative;
-    margin-left: var(--sidebar-width);
 }
 
 /* HERO */
@@ -305,6 +330,7 @@ a {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 0.45rem;
+    cursor: pointer;
 }
 
 .menu-icon {
@@ -350,7 +376,6 @@ a {
     justify-items: center;
     position: relative;
     padding-bottom: 15rem;
-    margin-left: var(--sidebar-width);
     gap: 1.5rem;
 }
 
@@ -396,7 +421,7 @@ a {
 .about-me-lorem {
     font-size: 1.5rem;
     line-height: 2rem;
-    border-bottom: 0.2rem solid rgba(52, 51, 51, 0.549);
+    border-bottom: 0.1rem solid rgba(52, 51, 51, 0.327);
     padding-bottom: 2rem;
 }
 
@@ -472,43 +497,25 @@ a {
 /* EXPERIENCE */
 
 .experience {
-    margin-left: var(--sidebar-width);
     height: 70vh;
-    margin-top: 15vh;
-}
-
-.experience-info {
-    margin-left: 3rem;
-}
-
-.hexagons {
-    display: flex;
-    gap: 5rem;
-}
-
-.hexagon-element {
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    width: 10rem;
-    height: 10rem;
-    background-color: black;
-    color: #FFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-@media only screen and (min-width: 855px) {
-    .navbar {
-        display: none;
-    }
+    margin-top: 5rem;
+    margin: 5rem 2rem;
+    text-align: center;
 }
 
 @media only screen and (max-width: 850px) {
+
+    body {
+        margin-left: 0;
+    }
 
     .sidebar {
         display: none;
     }
 
+    .icons {
+        display: none;
+    }
     .menu-icon {
         width: 0.5rem;
         height: 0.5rem;
@@ -534,9 +541,10 @@ a {
     }
 
     .about-me-data {
-        display: flex;
-        flex: wrap;
-        flex-direction: column;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-content: center;
+        
         gap: 0.5rem;
     }
 
@@ -576,15 +584,33 @@ a {
     }
 
     .about-me {
-        margin-left: 0;
+        grid-template-columns: 1fr;
+    }
+
+    .about-me-info {
+        margin: 1rem 2rem;
+    }
+
+    .about-me-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        gap: 0.2rem;
+        width: auto;
+    }
+
+    .about-me-data {
+        margin-bottom: 5rem;
     }
 
     .about-me-title {
         font-size: 2.4rem;
+        text-align: left;
     }
     
     .about-me-description {
         font-size: 1.5rem;
+        text-align: left;
     }
     
     .about-me-lorem {
