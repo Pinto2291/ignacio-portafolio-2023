@@ -29,10 +29,8 @@ window.addEventListener('scroll', () => {
 
         if(revealTop < windowHeight - revealPoint){
             revealElements[i].classList.add('active');
-        } else {
+        }/* else {
             revealElements[i].classList.remove('active');
-        }
+        }*/
     }
 })
-
-
