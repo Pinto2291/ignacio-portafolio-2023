@@ -20,10 +20,10 @@ window.addEventListener('scroll', () => {
 /* CURSOR ANIMATION */
 
 const carouselText = [
-    {text: 'Developer', color: '#29D663'},
-    {text: 'Engineer', color: '#DBE22D'},
-    {text: 'Front End Developer', color: '#23B94E'},
-    {text: 'Designer', color: '#29D6BA'},
+    {text: 'a Developer', color: '#29D663'},
+    {text: 'an Engineer', color: '#DBE22D'},
+    {text: 'a Front-End Developer', color: '#23B94E'},
+    {text: 'a Designer', color: '#29D6BA'},
 ]
 
 $(document).ready(async function() {
