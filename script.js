@@ -2,22 +2,6 @@ let buttonNav = document.querySelector('.icons');
 let sidebar = document.getElementById('sidebar');
 let mainBody = document.querySelector('body');
 
-let active = false;
-/*
-buttonNav.addEventListener('click', () => {
-
-    if(active){
-        mainBody.style.marginLeft = 'var(--sidebar-width)';
-        sidebar.style.width = 'var(--sidebar-width)';
-        active = false;
-    } else {
-        mainBody.style.marginLeft = '0';
-        sidebar.style.width = '0';
-        active = true;
-    }
-});
-*/
-
 window.addEventListener('scroll', () => {
     let revealElements = document.querySelectorAll('.reveal');
 
@@ -29,8 +13,69 @@ window.addEventListener('scroll', () => {
 
         if(revealTop < windowHeight - revealPoint){
             revealElements[i].classList.add('active');
-        }/* else {
-            revealElements[i].classList.remove('active');
-        }*/
+        }
     }
 })
+
+/* CURSOR ANIMATION */
+
+const carouselText = [
+    {text: 'Developer', color: '#29D663'},
+    {text: 'Engineer', color: '#DBE22D'},
+    {text: 'Front End Developer', color: '#23B94E'},
+    {text: 'Designer', color: '#29D6BA'},
+]
+
+$(document).ready(async function() {
+   carousel(carouselText, '#feature-text')
+   carousel(carouselText, '#feature-text-sidebar')
+});
+
+async function typeSentence(sentence, eleRef, delay = 100) {
+
+    const letters = sentence.split("");
+    let i = 0;
+
+    while(i < letters.length) {
+        await waitForMs(delay)
+        $(eleRef).append(letters[i])
+        i++
+    }
+    return;
+};
+
+async function deleteSentence(eleRef) {
+    const sentence = $(eleRef).html();
+    const letters = sentence.split("");
+    let i = 0;
+
+    while(letters.length > 0){
+        await waitForMs(100);
+        letters.pop();
+        $(eleRef).html(letters.join(''));
+    }
+}
+
+async function carousel(carouselList, eleRef){
+    var i = 0;
+
+    while(true){
+        updateFontColor(eleRef, carouselList[i].color)
+        await typeSentence(carouselList[i].text, eleRef);
+        await waitForMs(1200);
+        await deleteSentence(eleRef);
+        await waitForMs(500); 
+        i++
+        if(i >= carouselList.length){
+            i = 0;
+        }
+    }
+}
+
+function updateFontColor(eleRef, color){
+    $(eleRef).css('color', color)
+}
+
+function waitForMs(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}

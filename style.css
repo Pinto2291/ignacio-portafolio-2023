@@ -171,8 +171,9 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 0.5rem;
-    margin-top: 1rem;
+    padding: 0.8rem 1rem;
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    color: white;
 }
 
 .sidebar-title-button {
@@ -237,7 +238,7 @@ a {
 }
 
 .navbar-title {
-    text-align: center;
+    text-align: left;
 }
 
 .navbar-title-name {
@@ -276,12 +277,17 @@ a {
 /* HERO */
 
 .hero {
-    background-image: linear-gradient(180deg, rgba(40, 76, 209, 0.85), rgba(92, 118, 212, 0.5)), url('./img/working.jpg');
+    /*
+    background-image: linear-gradient(180deg, rgba(40, 76, 209, 0.80), rgba(92, 118, 212, 0.32)), url('./img/working.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    height: 100vh;
+    */
+
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+
+    height: 90vh;
     padding-top: 8rem;
     width: 100%;
     text-align: center;
@@ -289,20 +295,54 @@ a {
 }
 
 .hero-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin: 0 0 1rem;
 }
 
 .hero-text {
-    font-size: 1.6rem;
+    font-size: 2rem;
     margin-bottom: 3.5rem;
     font-weight: bold;
 }
 
 .hero-description {
-    font-size: 5rem;
+    font-size: 4rem;
     margin-bottom: 2rem;
     letter-spacing: 0.25rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* TYPING ELEMENT */
+
+.typing-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#feature-text, #feature-text-sidebar {
+    margin-left: 8px;
+}
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: white;
+    margin-left: 8px;
+    animation: blink .6s linear infinite alternate;
+}
+
+.input-cursor-black {
+    height: 20px;
+}
+
+@keyframes blink {
+    0% {opacity: 1;}
+    40% {opacity: 1;}
+    60% {opacity: 0;}
+    100% {opacity: 0;}
 }
 
 /* BUTTON */
@@ -318,39 +358,44 @@ a {
     font-weight: bold;
     border-radius: 3rem;
     border: none;
-    width: 10rem;
-    font-size: 1.6rem;
+    width: 25%;
+    
     transition: all 100ms ease-in 50ms;
     cursor: pointer;
 }
 
 .button-white {
-    background-color: #fff;
+    background-color: black;
     border: 0.1rem solid black;
+    font-size: 2rem;
+    color: var(--font-white);
 }
 
 .button-white:hover {
-    background-color: rgba(0, 0, 0, 0.75);
-    color: #FFF;
+    background-color: #fff;
+    color: black;
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     scale: 110%;
+    text-transform: uppercase;
 }
 
 .button-blue {
-    background-color: rgba(62, 68, 234, 0.78);
+    background-color: #46D629;
     color: var(--font-white);
     border: 0.1rem solid black;
+    font-size: 2rem;
 }
 
 .button-blue:hover {
     background-color: #FFF;
-    color: rgba(62, 68, 234, 0.78);
+    color: #46D629;
     box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
     scale: 110%;
+    text-transform: uppercase;
 }
 
 /* MENU ICONS */
@@ -479,13 +524,14 @@ a {
 }
 
 .curved-button-1 {
-    background-color: rgb(62, 68, 234);
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
     color: #FFF;
     border-radius: 71% 29% 77% 23% / 20% 74% 26% 80%;
     box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
     -webkit-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
     border: 0.2rem solid black;
+    width: 25%;
 }
 
 .curved-button-1:hover {
@@ -499,6 +545,7 @@ a {
     -webkit-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: -9px 3px 20px 0px rgba(0,0,0,0.75);
     border: 0.2rem solid black;
+    width: 25%;
 }
 
 .curved-button-2:hover {
@@ -638,6 +685,10 @@ a {
         height: 0.5rem;
     }
 
+    .button {
+        width: 40%;
+    }
+
     .about-me {
         grid-template-columns: 40% 60%;
         font-size: 8vw;
@@ -676,24 +727,32 @@ a {
         z-index: 1;
     }
 
+    .navbar-icons {
+        font-size: 1.2rem;
+    }
+
+    .navbar-title {
+        text-align: left;
+    }
+
     .hero {
         margin-top: 6.1rem;
     }
 
     .hero-title {
-        font-size: 2rem;
-    }
-    
-    .hero-text {
         font-size: 1.5rem;
     }
     
+    .hero-text {
+        font-size: 1.2rem;
+    }
+    
     .hero-description {
-        font-size: 3rem;
+        font-size: 2.1rem;
     }
 
     .button {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
 
     .header {
@@ -738,6 +797,16 @@ a {
         font-size: 1.2rem;
     }
 
+    .about-me-buttons > button {
+        font-size: 1.5rem;
+        width: 75%;
+    }
+
+    .curved-button-1 {
+        width: 70%;
+        font-size: 2rem;
+    }
+
     .wrapper-experience {
         grid-template: repeat(2, 1fr)/ 1fr;
         gap: 0.5rem;
@@ -754,13 +823,16 @@ a {
         padding-bottom: 72rem;
     }
 
+    .services-text {
+        padding-top: 2rem;
+    }
+
     .services-cards {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .card-services {
-        padding-top: 1.2rem;
-        height: 100%;
+    .card-services > p {
+        font-size: 1.2rem;
     }
 
 }

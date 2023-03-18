@@ -19,7 +19,13 @@
         <div class="sidebar-title">
             <img class="profile-picture" src="./img/ignacio face-optimize.jpg" alt="profile picture" loading="lazy">
             <p class="font-18 font-bold my-15">Ignacio Pinto</p>
-            <p class="font-12">I'm a Front End Developer</p>
+
+            <div class="typing-container font-15">
+                <span id="sentence-sidebar" class="sentence">I'm a</span>
+                <span id="feature-text-sidebar" class="font-bold"></span>
+                <span class="input-cursor input-cursor-black"></span>
+            </div>
+
         </div>
 
         <nav class="sidebar-navbar">
@@ -54,7 +60,7 @@
                 <p class="navbar-title-description">Front End Developer</p>
             </div>
 
-            <ul class="navbar-icons font-18 pb-10">
+            <ul class="navbar-icons font-15 pb-10">
                 <li><a href="#">Linkedin</a></li>
                 <li><a href="#">GitHub</a></li>
                 <li><a href="#">Twitter</a></li>
@@ -66,7 +72,16 @@
 
                 <p class="hero-title">Hello, my name is <span class="bg-black">Ignacio Pinto</span></p>
 
-                <h1 class="hero-description">I'm a Developer</h1>
+                <h1 class="hero-description">
+                    
+                <div class="typing-container">
+                    <span id="sentence" class="sentence">I'm a </span>
+                    <span id="feature-text"></span>
+                    <span class="input-cursor"></span>
+                </div>
+
+
+                </h1>
     
                 <p class="hero-text">I am a Front-End Developer and Civil Engineer <br>
                     capable of creating responsive websites, layouts and many more</p>
@@ -178,9 +193,9 @@
             </div>
 
             <div class="card card-services">
-                <div><i class="fa-solid fa-mobile-screen-button fa-xl"></i></div>
+                <div><i class="fa-solid fa-mobile fa-xl"></i></div>
                 <p class="font-15 bold font-blue">Responsive</p>
-                <p class="font-12">Making layouts that adapt to any device, making it easy for the any potential customer to check the information</p>
+                <p class="font-12">Making layouts that adapt to any device</p>
             </div>
 
             <div class="card card-services">
@@ -210,6 +225,8 @@
         </div>
 
     </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
 
 </body>
 </html>
