@@ -26,10 +26,11 @@ const carouselText = [
     {text: 'a Designer', color: '#29D6BA'},
 ]
 
+
 $(document).ready(async function() {
-   carousel(carouselText, '#feature-text')
-   carousel(carouselText, '#feature-text-sidebar')
-});
+    carousel(carouselText, '#feature-text')
+    carousel(carouselText, '#feature-text-sidebar')
+})
 
 async function typeSentence(sentence, eleRef, delay = 100) {
 
@@ -57,7 +58,7 @@ async function deleteSentence(eleRef) {
 }
 
 async function carousel(carouselList, eleRef){
-    var i = 0;
+    let i = 0;
 
     while(true){
         updateFontColor(eleRef, carouselList[i].color)
