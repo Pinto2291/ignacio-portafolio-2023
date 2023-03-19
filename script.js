@@ -26,38 +26,50 @@ const carouselText = [
     {text: 'a Designer', color: '#29D6BA'},
 ]
 
+document.addEventListener('DOMContentLoaded', () => {
+    carousel(carouselText, 'feature-text')
+    carousel(carouselText, 'feature-text-sidebar')
+})
+
+/*
 $(document).ready(async function() {
-   carousel(carouselText, '#feature-text')
-   carousel(carouselText, '#feature-text-sidebar')
+   carousel(carouselText, 'feature-text')
+   carousel(carouselText, 'feature-text-sidebar')
 });
+*/
 
 async function typeSentence(sentence, eleRef, delay = 100) {
 
     const letters = sentence.split("");
     let i = 0;
+    const arrLetters = [];
 
     while(i < letters.length) {
         await waitForMs(delay)
-        $(eleRef).append(letters[i])
+        arrLetters.push(letters[i]);
+        //$(eleRef).append(letters[i]);
+        document.getElementById(eleRef).innerHTML = arrLetters.join('')
         i++
     }
     return;
 };
 
 async function deleteSentence(eleRef) {
-    const sentence = $(eleRef).html();
+    const sentence = document.getElementById(eleRef).innerHTML;
+    //const sentence = $(eleRef).html();
     const letters = sentence.split("");
     let i = 0;
 
     while(letters.length > 0){
         await waitForMs(100);
         letters.pop();
-        $(eleRef).html(letters.join(''));
+        //$(eleRef).html(letters.join(''));
+        document.getElementById(eleRef).innerHTML = letters.join('')
     }
 }
 
 async function carousel(carouselList, eleRef){
-    var i = 0;
+    let i = 0;
 
     while(true){
         updateFontColor(eleRef, carouselList[i].color)
@@ -73,7 +85,8 @@ async function carousel(carouselList, eleRef){
 }
 
 function updateFontColor(eleRef, color){
-    $(eleRef).css('color', color)
+    //$(eleRef).css('color', color)
+    document.getElementById(eleRef).style.color = color;
 }
 
 function waitForMs(ms) {
