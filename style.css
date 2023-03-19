@@ -1,6 +1,7 @@
 :root {
     --font-white: #FFF;
     --font-black: #000000;
+    --project-green: #46D629;
     --bg-black: #000000;
     --sidebar-width: 25rem;
     --light-blue: rgba(62, 68, 234, 0.78);
@@ -91,6 +92,19 @@ a {
     margin-left: 1rem;
 }
 
+.pink {
+    background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+}
+
+.flip {
+    transform: rotate(180deg);
+}
+
+.blob-motion {
+    position: absolute;
+    transform: translateY(-20%);
+}
+
 /* PADDING */
 
 .pb-10 {
@@ -147,6 +161,10 @@ a {
 
 .font-blue {
     color: var(--light-blue);
+}
+
+.font-white {
+    color: var(--font-white);
 }
 
 /* SIDEBAR */
