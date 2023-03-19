@@ -1,6 +1,7 @@
 :root {
     --font-white: #FFF;
-    --bg-black: black;
+    --font-black: #000000;
+    --bg-black: #000000;
     --sidebar-width: 25rem;
     --light-blue: rgba(62, 68, 234, 0.78);
 }
@@ -365,35 +366,41 @@ a {
 }
 
 .button-white {
-    background-color: black;
+    background-color: #fff;
     border: 0.1rem solid black;
     font-size: 2rem;
-    color: var(--font-white);
+    color: var(--font-black);
+    box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
 }
 
 .button-white:hover {
-    background-color: #fff;
-    color: black;
-    box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
-    -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    background-color: var(--bg-black);
+    color: var(--font-white);
+    box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
+-webkit-box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
+-moz-box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
     scale: 110%;
     text-transform: uppercase;
 }
 
 .button-blue {
     background-color: #46D629;
-    color: var(--font-white);
+    color: var(--font-black);
     border: 0.1rem solid black;
     font-size: 2rem;
+    box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
+-webkit-box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: -10px 20px 17px 0px rgba(0,0,0,0.75);
 }
 
 .button-blue:hover {
-    background-color: #FFF;
+    background-color: var(--bg-black);
     color: #46D629;
-    box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
-    -webkit-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
-    -moz-box-shadow: 15px 12px 27px 2px rgba(0,0,0,0.65);
+    box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
+-webkit-box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
+-moz-box-shadow: -10px 20px 17px 0px rgba(255,255,255,0.85);
     scale: 110%;
     text-transform: uppercase;
 }
