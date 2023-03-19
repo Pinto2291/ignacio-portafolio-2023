@@ -31,13 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
     carousel(carouselText, 'feature-text-sidebar')
 })
 
-/*
-$(document).ready(async function() {
-   carousel(carouselText, 'feature-text')
-   carousel(carouselText, 'feature-text-sidebar')
-});
-*/
-
 async function typeSentence(sentence, eleRef, delay = 100) {
 
     const letters = sentence.split("");
@@ -47,7 +40,6 @@ async function typeSentence(sentence, eleRef, delay = 100) {
     while(i < letters.length) {
         await waitForMs(delay)
         arrLetters.push(letters[i]);
-        //$(eleRef).append(letters[i]);
         document.getElementById(eleRef).innerHTML = arrLetters.join('')
         i++
     }
@@ -56,14 +48,11 @@ async function typeSentence(sentence, eleRef, delay = 100) {
 
 async function deleteSentence(eleRef) {
     const sentence = document.getElementById(eleRef).innerHTML;
-    //const sentence = $(eleRef).html();
     const letters = sentence.split("");
-    let i = 0;
 
     while(letters.length > 0){
         await waitForMs(100);
         letters.pop();
-        //$(eleRef).html(letters.join(''));
         document.getElementById(eleRef).innerHTML = letters.join('')
     }
 }
@@ -85,7 +74,6 @@ async function carousel(carouselList, eleRef){
 }
 
 function updateFontColor(eleRef, color){
-    //$(eleRef).css('color', color)
     document.getElementById(eleRef).style.color = color;
 }
 
