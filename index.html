@@ -8,14 +8,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    <title>Ignacio portafolio</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/1769923986.js" crossorigin="anonymous"></script>
-    <script src="./script.js" async></script>
-    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js" integrity="sha256-ekq8UIBrOC1lgaJmRRV/c50s5Hy/EBKjBD/7nM9dvp0=" crossorigin="anonymous"></script>
-    <title>Ignacio portafolio</title>
+    
 </head>
 
 <body>
+
+    <!-- SIDEBAR START -->
 
     <aside id="sidebar" class="sidebar">
 
@@ -53,6 +54,8 @@
         </div>
 
     </aside>
+
+    <!-- SIDEBAR END -->
 
     <header class="header">
 
@@ -237,14 +240,17 @@
 
     </section>
 
+    <!-- BLOB START -->
+
     <div class="spacer layer2 flip"></div>
+
     <section class="pink">
         <p class="font-15 text-center my-10 font-white">this is where the blob is located</p>
 
         <svg 
         id="visual" 
         viewBox="0 0 900 600" 
-        width="800" 
+        width="650" 
         height="533.33" 
         xmlns="http://www.w3.org/2000/svg"
         xmlns:xlink="http://www.w3.org/1999/xlink" 
@@ -259,19 +265,28 @@
 
         </svg>
 
-        <script>
-            const tween = KUTE.fromTo(
-                '#blob1',
-                {path: '#blob1'},
-                {path: '#blob2'},
-                {repeat: 999, duration: 3000, yoyo: true}
-            )
-            tween.start();
-        </script>
-
     </section>
 
     <div class="spacer layer2"></div>
+
+    <!-- BLOB END -->
+
+    <!-- SECTION PORTFOLIO GALLERY START -->
+
+    <section class="portfolio">
+
+    </section>
+
+    <!-- SECTION PORTFOLIO GALLERY END -->
+
+    <!-- SCRIPTS -->
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.2.4/dist/kute.min.js" integrity="sha256-ekq8UIBrOC1lgaJmRRV/c50s5Hy/EBKjBD/7nM9dvp0=" crossorigin="anonymous"></script>
+
+    <script src="./script.js" async></script>
+
+    <!-- SCRIPTS END -->
 
 </body>
 

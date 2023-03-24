@@ -80,3 +80,14 @@ function updateFontColor(eleRef, color){
 function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
+
+
+// KUTE animation
+
+const tween = KUTE.fromTo(
+    '#blob1',
+    {path: '#blob1'},
+    {path: '#blob2'},
+    {repeat: 999, duration: 3000, yoyo: true}
+)
+tween.start();
