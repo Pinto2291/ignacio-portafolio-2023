@@ -1,6 +1,8 @@
-let buttonNav = document.querySelector('.icons');
-let sidebar = document.getElementById('sidebar');
-let mainBody = document.querySelector('body');
+$(document).ready(() => {
+
+    let buttonNav = document.querySelector('.icons');
+    let sidebar = document.getElementById('sidebar');
+    let mainBody = document.querySelector('body');
 
 window.addEventListener('scroll', () => {
     let revealElements = document.querySelectorAll('.reveal');
@@ -25,11 +27,6 @@ const carouselText = [
     {text: 'a Front-End Developer', color: '#23B94E'},
     {text: 'a Designer', color: '#29D6BA'},
 ]
-
-document.addEventListener('DOMContentLoaded', () => {
-    carousel(carouselText, 'feature-text')
-    carousel(carouselText, 'feature-text-sidebar')
-})
 
 async function typeSentence(sentence, eleRef, delay = 100) {
 
@@ -81,7 +78,6 @@ function waitForMs(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-
 // KUTE animation
 
 const tween = KUTE.fromTo(
@@ -91,3 +87,15 @@ const tween = KUTE.fromTo(
     {repeat: 999, duration: 3000, yoyo: true}
 )
 tween.start();
+
+
+    carousel(carouselText, 'feature-text')
+    carousel(carouselText, 'feature-text-sidebar')
+
+}) // END of document.ready
+
+/*
+document.addEventListener('DOMContentLoaded', () => {
+    
+})
+*/
