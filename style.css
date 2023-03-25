@@ -5,6 +5,8 @@
     --bg-black: #000000;
     --sidebar-width: 25rem;
     --light-blue: rgba(62, 68, 234, 0.78);
+    --purple: #8e2de2;
+    --blue-1: #4a00e0;
 }
 
 * {
@@ -53,8 +55,11 @@ a {
 .bg-black {
     background-color: rgba(0, 0, 0, 0.65);
     padding: 0.5rem 1rem;
-    font-weight: bold;
     border-radius: 3rem;
+}
+
+.black-border {
+    border: 0.2rem solid black;
 }
 
 .uppercase {
@@ -94,6 +99,7 @@ a {
 
 .pink {
     background-image: linear-gradient(to right, #8e2de2, #4a00e0);
+    height: 80%;
 }
 
 .flip {
@@ -103,6 +109,29 @@ a {
 .blob-motion {
     position: absolute;
     transform: translateY(-20%);
+}
+
+.blob-red {
+    margin: auto;
+    height: auto;
+}
+
+.blob-section {
+    display: grid;
+    grid-template: 1fr/ repeat(2, 1fr);
+    align-items: center;
+}
+
+.blob-section-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    text-align: center;
+    align-items: center;
+}
+
+.blob-section-text > p {
+    width: 50%;
 }
 
 /* PADDING */
@@ -159,12 +188,51 @@ a {
     font-size: 2.5rem;
 }
 
+.font-30 {
+    font-size: 3rem;
+}
+
+.font-32 {
+    font-size: 3.2rem;
+}
+
+.font-35 {
+    font-size: 3.5rem;
+}
+
+.font-40 {
+    font-size: 4rem;
+}
+
+.font-45 {
+    font-size: 4.5rem;
+}
+
+.font-48 {
+    font-size: 4.8rem;
+}
+
 .font-blue {
     color: var(--light-blue);
 }
 
 .font-white {
     color: var(--font-white);
+}
+
+.font-purple {
+    color: var(--purple);
+}
+
+.font-green {
+    color: var(--project-green);
+}
+
+/* CURVED BUTTONS AND STYLES */
+
+.curved-style {
+    border-radius: 71% 29% 77% 23% / 20% 74% 26% 80%;
+    border: 0.2rem solid black;
 }
 
 /* SIDEBAR */
@@ -497,7 +565,7 @@ a {
 }
 
 .custom-shape-divider-bottom-1678516310 .shape-fill {
-    fill: #3E44EAC7;
+    fill: var(--purple);
 }
 
 .about-me-info {
@@ -506,8 +574,6 @@ a {
 }
 
 .about-me-title {
-    font-size: 3.6rem;
-    font-weight: bold;
     margin-bottom: 0.6rem;
 }
 
@@ -686,10 +752,16 @@ a {
 }
 
 .card-services {
+    /*
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    */
+
+    display: grid;
+    grid-template-rows: 30% 70%;
+    align-items: center;
 }
 
 @media only screen and (max-width: 850px) {
@@ -858,6 +930,13 @@ a {
 
     .card-services > p {
         font-size: 1.2rem;
+    }
+
+    .blob-section {
+        
+        grid-template: repeat(2, 1fr)/ 1fr;
+        align-items: center;
+        
     }
 
 }

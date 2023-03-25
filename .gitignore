@@ -1,2 +1,5 @@
 # vscode configuration files
 vscode
+
+# jsconfig
+jsconfig.json
