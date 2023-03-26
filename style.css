@@ -114,6 +114,7 @@ a {
 .blob-red {
     margin: auto;
     height: auto;
+    width: 75%;
 }
 
 .blob-section {
@@ -294,6 +295,7 @@ a {
     color: rgba(40, 77, 209, 0.916);
     margin-left: 2.5rem;
     border-bottom: 0.25rem solid rgba(0, 0, 0, 0.16);
+    scale: 120%;
 }
 
 .sidebar-footer {
@@ -732,8 +734,9 @@ a {
 /* SERVICES */
 
 .services {
-    height: 80vh;
+    height: 80%;
     margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .services-text {
@@ -837,19 +840,19 @@ a {
     }
 
     .hero-title {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
     
     .hero-text {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
     }
     
     .hero-description {
-        font-size: 2.1rem;
+        font-size: 2.5rem;
     }
 
     .button {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .header {
@@ -916,9 +919,9 @@ a {
         align-items: center;
     }
 
-    .services {
-        padding-bottom: 72rem;
-    }
+    /*.services {
+        padding-bottom: 5rem;
+    }*/
 
     .services-text {
         padding-top: 2rem;
@@ -933,10 +936,12 @@ a {
     }
 
     .blob-section {
-        
         grid-template: repeat(2, 1fr)/ 1fr;
-        align-items: center;
-        
+        align-items: center;   
+    }
+
+    .blob-red {
+        width: 50%;
     }
 
 }

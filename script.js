@@ -88,7 +88,6 @@ const tween = KUTE.fromTo(
 )
 tween.start();
 
-
     carousel(carouselText, 'feature-text')
     carousel(carouselText, 'feature-text-sidebar')
 
